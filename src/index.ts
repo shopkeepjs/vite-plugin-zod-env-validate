@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { loadEnv, type ConfigEnv, type Plugin, type UserConfig } from 'vite';
 import type { ZodIssue } from 'zod';
-import type { PluginParameters } from '.';
+import type { PluginParameters } from './types';
 
 const printErrorMessages = (errors: ZodIssue[]): string =>
 	errors.reduce((str, error) => `${str}• ${error.message}\n `, '');
