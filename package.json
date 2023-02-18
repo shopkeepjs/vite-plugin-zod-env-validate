@@ -4,10 +4,9 @@
 	"version": "0.1.0",
 	"type": "module",
 	"description": "A Vite plugin to validate environment variables using Zod before build.",
+	"main": "dist/index.js",
 	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"build": "tsc --build"
 	},
 	"devDependencies": {
 		"typescript": "^4.9.3",

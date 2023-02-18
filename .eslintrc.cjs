@@ -23,4 +23,5 @@ module.exports = {
 		'import/no-extraneous-dependencies': 0,
 		'import/no-mutable-exports': 0,
 	},
+	ignorePatterns: ['build/*'],
 };

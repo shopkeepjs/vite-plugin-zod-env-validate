@@ -6,13 +6,14 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"esModuleInterop": true,
-		"noEmit": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"skipLibCheck": true,
 		"types": ["node"],
-		"baseUrl": "./"
+		"outDir": "./build",
+		"rootDir": "./src"
 	},
-	"include": ["./src/**/*.ts", "*.cjs", ".*.cjs", "*.js", "*.ts", ".eslintrc.cjs"]
+	"include": ["src/*.ts", "*.cjs", ".*.cjs", "*.js", "*.ts", ".eslintrc.cjs"],
+	"exclude": ["build/*.js"]
 }
