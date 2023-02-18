@@ -12,8 +12,9 @@
 		"skipLibCheck": true,
 		"types": ["node"],
 		"outDir": "./build",
-		"rootDir": "./src"
+		"rootDir": "./src",
+		"declaration": true
 	},
-	"include": ["src/*.ts", "*.cjs", ".*.cjs", "*.js", "*.ts", ".eslintrc.cjs"],
+	"include": ["src/*.ts", "*.cjs", ".*.cjs", "*.js", "*.ts", ".eslintrc.cjs", "src/.d.ts"],
 	"exclude": ["build/*.js"]
 }

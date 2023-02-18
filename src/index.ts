@@ -1,7 +1,18 @@
+/* eslint-disable import/no-duplicates */
 /* eslint-disable no-console */
-import { loadEnv, type ConfigEnv, type Plugin, type UserConfig } from 'vite';
-import type { ZodIssue } from 'zod';
-import type { PluginParameters } from './types';
+// import { loadEnv, type ConfigEnv, type Plugin, type UserConfig } from 'vite';
+import { type Plugin, loadEnv } from 'vite';
+import type { ConfigEnv, UserConfig } from 'vite';
+
+import type { ZodIssue, ZodTypeAny } from 'zod';
+
+export interface PluginParameters {
+	envLocation?: string;
+	safeParse?: boolean;
+	envPrefix?: string;
+	customKeyTransformFunction?: (variables: Record<string, string>) => Record<string, string>;
+	schema: ZodTypeAny;
+}
 
 const printErrorMessages = (errors: ZodIssue[]): string =>
 	errors.reduce((str, error) => `${str}• ${error.message}\n `, '');
@@ -21,11 +32,9 @@ const validate = (config: UserConfig, env: ConfigEnv, options: PluginParameters)
 	}
 };
 
-function validateEnvironment(options: PluginParameters): Plugin {
-	return {
-		name: 'vite-plugin-zod-env-validate',
-		config: (config: UserConfig, env: ConfigEnv) => validate(config, env, options),
-	};
-}
+export const validateEnvironment = (options: PluginParameters): Plugin => ({
+	name: 'vite-plugin-zod-env-validate',
+	config: (config, env) => validate(config, env, options),
+});
 
 export default validateEnvironment;
