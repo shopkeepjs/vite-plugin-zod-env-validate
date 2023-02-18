@@ -1,0 +1,32 @@
+{
+	"name": "vite-plugin-zod-env-validate",
+	"private": false,
+	"version": "0.1.0",
+	"type": "module",
+	"description": "A Vite plugin to validate environment variables using Zod before build.",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"typescript": "^4.9.3",
+		"vite": "^4.1.0",
+		"@types/node": "^18.14.0",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"eslint": "^8.34.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-config-standard-with-typescript": "^34.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"prettier": "2.8.4",
+		"zod": "^3.20.6",
+		"eslint-plugin-prettier": "^4.2.1"
+	}
+}
